@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Recursos em HTML5">
+    <meta name="author" content="Neemias Cormino Manso">
+    
+    <title>30/08/2024</title>
+    <link rel="shortcut icon" href="./assets/livro.png" type="image/png">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <h1>Alguns Recursos de HTML5</h1>
+
+        <!-- botão para os links âncora -->
+        <button onclick="pesquisar()">
+            <img src="./assets/lupa.png" alt="pula para pesquisa">
+        </button>
+
+        <!-- links âncora -->
+        <nav id="navegacao">
+            <ul>
+                <a href="#paragrafo"><li>Parágrafos</li></a>
+                <a href="#listas"><li>Listas</li></a>
+                <a href="#tabela"><li>Tabela</li></a>
+                <a href="#formulario"><li>Formulário</li></a>
+                <a href="#midia"><li>Mídia</li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1º seção -->
+    <div id="container-geral">
+        <section id="paragrafo">
+            <h2>Parágrafos e Formatação</h2>
+
+            <div id="container-paragrafo">
+                <div>
+                    <!-- paragrafo simples -->
+                    <p>Este é o parágrafo básico. Elemento: <code>&lt;p&gt;</code> </p> 
+
+                    <!-- linha horizontal -->
+                    <p> Criação de linha horizontal. Elemento: <code>&lt;hr&gt;</code> </p> 
+                </div>
+                <div>
+                    <!-- negrito e italico -->
+                    <p> <strong>Texto em negrito</strong>. Elemento: <code>&lt;strong&gt;</code> ou <code>&lt;b&gt;</code> </p>
+                    <p> <em>Texto em itálico</em>. Elemento: <code>&lt;em&gt;</code> ou <code>&lt;i&gt;</code> </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2º seção -->
+        <section id="listas">
+            <h2>Listas</h2>
+
+            <div id="container-listas">
+                <!-- tipos de lista -->
+                <div>
+                    <h3>Não ordenada. Elemento: <code>&lt;li&gt;</code> dentro de <code>&lt;ul&gt;</code> </h3>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ordenada. Elemento: <code>&lt;li&gt;</code> dentro de <code>&lt;ol&gt;</code></h3>
+                    <ol>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3º seção -->
+        <section id="tabela">
+            <h2>Tabela</h2>
+
+            <div id="container-tabela">
+                <h3>Elemento: <code>&lt;table&gt;</code> e outros como <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> e <code>&lt;th&gt;</code> </h3>
+                <table border="1" id="tabela_exemplo">
+                    <thead>
+                     <tr>
+                      <th width="10%">Title 1</th>
+                      <th width="10%">Title 2</th>
+                      <th width="10%">Title 3</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                    </tr>
+                    <tr>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                    </tr>
+                    <tr>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                       <td>Campos</td>
+                    </tr>
+                  </tbody>
+               </table>
+            </div>
+        </section>
+
+        <!-- 4º seção -->
+        <section id="formulario">
+            <h2>Formulário</h2>
+
+            <div id="container-formulario">
+                <h3>Elemento: <code>&lt;form&gt;</code> e dentro <code>&lt;label&gt;</code> e <code>&lt;input&gt;</code> </h3>
+                <div>
+                    <form action="a" method="post">
+                        <!-- campo de texto -->
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome"> <br> <br>
+
+                        <!-- campo de email -->
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"> <br> <br>
+                    </form>
+                    <form action="a" method="post">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" id="telefone"> <br> <br>
+
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha"> <br> <br>
+                    </form>
+                </div>
+                <!-- campo de seleção -->
+                <label for="aceito">Aceito os Termos</label>
+                <input type="checkbox" name="aceito" id="aceito"> <br> <br>
+                
+                <!-- botão de envio -->
+                <input type="submit" value="Enviar">     
+            </div>   
+        </section>
+
+        <!-- 5º seção-->
+        <section id="midia">
+            <h2>Mídia</h2>
+
+            <div id="container-midia">
+                <div>
+                    <!-- imagem -->
+                    <h3>Imagem. Elemento: <code>&lt;img&gt;</code> </h3>
+                    <img src="./assets/cachorro.webp" alt="cachorro coitado">
+                </div>
+                <div>
+                    <!-- video -->
+                    <h3>Vídeo. Elemento: <code>&lt;video&gt;</code> </h3>
+                    <video controls>
+                        <source src="https://cdn.pixabay.com/video/2023/08/28/178030-858498559_large.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- rodapé -->
+    <footer>
+        <p>&copy; 2024 - Desenvolvido por <a target="_blank" href="https://github.com/n33miaz">Neemias Cormino Manso</a></p>
+    </footer>
+</body>
+<script src="./js/script.js"></script>
+</html>
